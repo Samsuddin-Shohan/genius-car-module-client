@@ -1,0 +1,36 @@
+[debug] [2022-04-08T11:05:07.403Z] ----------------------------------------------------------------------
+[debug] [2022-04-08T11:05:07.405Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-04-08T11:05:07.406Z] CLI Version:   10.4.0
+[debug] [2022-04-08T11:05:07.406Z] Platform:      win32
+[debug] [2022-04-08T11:05:07.406Z] Node Version:  v16.0.0
+[debug] [2022-04-08T11:05:07.420Z] Time:          Fri Apr 08 2022 17:05:07 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-04-08T11:05:07.421Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-08T11:05:07.433Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-04-08T11:05:07.527Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-08T11:05:07.528Z] > authorizing via signed-in user (shohankhan682014@gmail.com)
+[debug] [2022-04-08T11:05:07.528Z] [iam] checking project genius-car-mechanics for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-04-08T11:05:07.528Z] > refreshing access token with scopes: []
+[debug] [2022-04-08T11:05:07.529Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-08T11:05:08.205Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 08 Apr 2022 11:05:09 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-08T11:05:08.223Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-mechanics:testIamPermissions [none]
+[debug] [2022-04-08T11:05:08.223Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-mechanics:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-04-08T11:05:08.929Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-04-08T11:05:08.929Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-04-08T11:05:10.223Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-mechanics:testIamPermissions 200
+[debug] [2022-04-08T11:05:10.224Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/genius-car-mechanics:testIamPermissions {}
+[debug] [2022-04-08T11:05:10.225Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project genius-car-mechanics:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-04-08T11:05:10.227Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-mechanics [none]
+[debug] [2022-04-08T11:05:10.883Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-mechanics 403
+[debug] [2022-04-08T11:05:10.883Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-mechanics {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-04-08T11:05:10.885Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-04-08T11:05:11.279Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\44785\AppData\Roaming\nvm\v16.0.0\node_modules\firebase-tools\lib\responseToError.js:47:12)
+    at RetryOperation._fn (C:\Users\44785\AppData\Roaming\nvm\v16.0.0\node_modules\firebase-tools\lib\apiv2.js:286:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project genius-car-mechanics. Please make sure the project exists and your account has permission to access it.

@@ -1,0 +1,4 @@
+.carousel-indicators [data-bs-target]{
+    height: 17px;
+    width: 10px;
+}
